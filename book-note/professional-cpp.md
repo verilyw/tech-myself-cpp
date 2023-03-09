@@ -192,3 +192,32 @@ weak_ordering::equavalent
 + `value()`
 + `value_or()`
 
+#### 初始化列表
+
+使函数接收可变数量的参数更加容易
+
+```c++
+import <initializer_list>
+
+int makeSum(std::initializer_list<int> values)
+{
+    int total {0};
+    for (int value : values) {
+        total += value;
+    }
+    return total;
+}
+```
+
+#### 字符串
+
+1. c-style: 字符数组
+2. c++ sttle：字符串类
+
+#### `Const`的使用
+
+1. const as a Qualifier for a Type
+    + const作用于指针(顶层和底层)
+    + const作用于形参变量，使参数不能被修改（传参时，non-const可以转成const）
+  
+2. const Methods，阻止修改成员变量
